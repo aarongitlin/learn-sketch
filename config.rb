@@ -11,7 +11,7 @@ set :relative_links, true
 set :partials_dir, 'partials'
 
 # Livereload
-activate :livereload
+activate :livereload, :host => '127.0.0.1'
 
 # Syntax Highlighting
 activate :syntax

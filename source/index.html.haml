@@ -1,0 +1,60 @@
+---
+title: Pattern Library Elements
+body_class: elements
+---
+
+=# stylesheet_link_tag "elements"
+
+.light-gray-container.top-section
+  .wrapper
+    %section.style-overview
+      %p.concept-text Learning Sketch... The hard way
+
+.wrapper
+  %section
+    %h3 Open Sketch
+    .description
+      %p Hopefully you already have Sketch on your computer. If not, no problem, ask Aaron and he'll get you set up. 
+      %p Go to <strong>New</strong> > <strong>New From Template</strong> and then choose <strong> iOS UI Design</strong> or <strong>Material Design</strong>, depending on what you want to build.
+
+  %section
+    %h3 Make a New Page
+    .description
+      %p We start on a page filled with cool UI stuff, but let's make a new page for our own designs.
+      %p
+        = image_tag 'new_page_1.png', :class => 'half-width'
+        = image_tag 'new_page_2.png', :class => 'half-width'
+
+  %section
+    %h3 Make some artboards
+    .description
+      %p This is going to sound really intense... but press 'a'. The right hand menu should reveal some options. Pick the approriate size for your device, mainly <strong>iPhone 6</strong> for iOS or <strong>Mobile Portrait</strong> for Android.
+      %p
+        = image_tag 'artboard_select.png', :class => 'third-width'
+
+  %section
+    %h3 Make a Splash Page
+    .description
+      %p Use a solid background color for a punch, plus an icon and/or some textany necessary system stuff (navigation bar) HINTS: insert rectangle shortcut: ‘r’, ‘f’, and ‘b’ to toggle fill and border ‘fn UP’ and ‘fn DOWN’ to toggle between Pages, copy and paste over OR Insert Symbol.
+      %p
+        = image_tag 'splash_example.png', :class => 'third-width'
+
+  %section
+    %h3 Make a Login Page
+    .description
+      %p <strong>Backgournd </strong> </ br>
+      select the background color from the splash page, and make a new <strong>Style</strong>, ‘primary-color’. For now, let’s just copy and paste it over - copy the background rectangle, select the new artboard, and paste.
+      %p <strong>Logo</strong></ br>
+      Let’s copy and paste over the logo and title as well. Let’s make it smaller, move it up. Make sure it’s in a group so the text reduces correctly.
+      %p <strong>Text boxes</strong></ br>
+      Let’s make two text boxes for our username and password. We’ll set these as symbols, so if we change one it will change the other.
+      %ul
+        %li Create rectangle (start from middle, use CMD so you size from center)
+        %li Option drag to create a copy
+        %li Create styles for both
+      %p
+        = image_tag 'create_symbol.png', :class => 'half-width'
+      %p <strong> Login Button </strong> </ br>
+      You can use CTRL-C to copy a style, and give it a baller shadow.
+
+
