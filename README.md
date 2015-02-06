@@ -11,3 +11,11 @@ $ git clone git://github.com/polarblau/middleman-template.git ~/.middleman/middl
 ```
 
 Initialize middleman on a new or existing folder `$ middleman init PATH --template=middleman-polarblau`
+
+### Todos  
+Change static images to gifs  
+Change content to markdown  
+Makes images responsive  
+Use symbols for CMD  
+
+

@@ -8,6 +8,10 @@ html {
 	overflow-y: scroll;
 }
 
+a {
+	color: #E5332A;
+	font-weight: bold;
+}
 // Site header
 .site-header {
 	background-color: $off-white;
@@ -74,6 +78,9 @@ section {
 }
 .third-width {
 	width: 32%;
+}
+.two-thirds-width {
+	width: 65%;
 }
 // Colors
 .colors-container {
