@@ -3,9 +3,7 @@
 @import 'base/base';
 @import 'neat/neat';
 
-$ts_red: #E5332A;
-$ts_red_dark: #AE151E;
-$ts_orange: #E84E1B;
+
 
 // Prevent stupid page-shift scroll when some pages have scroll bars and others don't
 html {
@@ -29,6 +27,9 @@ p, ul {
 ul li {
 	list-style: circle;
 	margin-left: 1.0em;
+}
+li.list-header {
+	margin-left: 0;
 }
 
 .image-container img {
@@ -98,6 +99,16 @@ section {
 	@include padding (0.2em null 0.2em null);
 }
 
+.half-column {
+	@include media($medium-screen-up) {
+		@include span-columns(6);
+	}
+}
+.third-column {
+	@include media($medium-screen-up) {
+		@include span-columns(2);
+	}
+}
 // Styles
 
 .light-red-container {
@@ -118,66 +129,41 @@ section {
 	}
 }
 .half-width {
-	width: 48%;
+	@include media($medium-screen-up) {
+		width: 48%;
+	}
 }
 .third-width {
-	width: 32%;
+	@include media($medium-screen-up) {
+		width: 32%;
+	}
 }
 .two-thirds-width {
-	width: 65%;
+	@include media($medium-screen-up) {
+		width: 65%;
+	}
 }
-// Colors
-.colors-container {
-	margin-top: 1.5em;
+
+.dark-container {
+	background-color: $dark-gray;
 }
-.colors-category {
-	@include span-columns(8);
-	@include shift(2);
-	@include omega();
+ul.link-collection {
 	padding-top: 1em;
-
-}
-.color-section-title {
-	text-align: center;
-	border-bottom: 1px solid $light-gray;
-}
-.color-grid {
-	@include span-columns(8);
-	@include shift(2 of 8);
-}
-.color {
-	@include span-columns(2 of 8);
-	border: 1px solid gray;
-	border-radius: 3px;
-	height: 6em;
+	padding-bottom: 1em;
 	margin-top: 1em;
-	&.primary.one {
-		background-color: $light-blue;
-	}
-	&.primary.two {
-
-	}
-	&.primary.three {
+	margin-bottom: 1em;
+	color: $light-gray;
+	border-top: 1px solid darken($mid-gray, 5%);
+	border-bottom: 1px solid darken($mid-gray, 5%);
+	li {
+		list-style: none;
 	}
 }
-.secondary-colors {
-	@include span-columns(8);
-	@include shift(2);
-	@include omega();
-}
-.color-secondary {
-	@include span-columns(2);
-
-}
-
-
-
 //Footer
 
 footer {
-	border-top: 1px solid $light-gray;
-	padding-top: 2em;
-	margin-top: 3em;
+	background-color: darken($dark-gray, 4);
+	padding-top: 1em;
 	text-align: center;
 }
 

@@ -30,16 +30,23 @@ $red: #e32728;
 $orange: #F2784B;
 $dark-orange: #A54E2D;
 
+$ts_red: #E5332A;
+$ts_red_dark: #AE151E;
+$ts_orange: #E84E1B;
+
+$mid-gray: #575756;
+$light-gray: #C6C6C5;
+
 // Background Color
 $base-background-color: white;
 
 // Font Colors
 $base-font-color: $dark-gray;
-$base-accent-color: $deep-blue;
+$base-accent-color: $ts_orange;
 
 // Link Colors
 $base-link-color: $base-accent-color;
-$hover-link-color: darken($base-accent-color, 15);
+$hover-link-color: darken($base-accent-color, 10);
 $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;
 
