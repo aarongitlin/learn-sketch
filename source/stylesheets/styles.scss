@@ -26,6 +26,11 @@ p, ul {
 	margin-right: auto;
 }
 
+ul li {
+	list-style: circle;
+	margin-left: 1.0em;
+}
+
 .image-container img {
 	padding: 5px;
 	border: 1px solid $light-gray;
