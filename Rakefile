@@ -3,7 +3,7 @@ require 'middleman-gh-pages'
 dev = OpenStruct.new({
   :ssh_user    => "aarongitlin",
   :local_root  => "./build/",
-  :remote_root => "git@github.com:aarongitlin/pattern-library-middleman.git",
+  :remote_root => "git@github.com:aarongitlin/learn-sketch.git",
   :public_url  => ""
 })
 
