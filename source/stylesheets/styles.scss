@@ -3,29 +3,52 @@
 @import 'base/base';
 @import 'neat/neat';
 
+$ts_red: #E5332A;
+$ts_red_dark: #AE151E;
+$ts_orange: #E84E1B;
+
 // Prevent stupid page-shift scroll when some pages have scroll bars and others don't
 html {
 	overflow-y: scroll;
 }
 
 a {
-	color: #E5332A;
+	color: $ts_orange;
 	font-weight: bold;
 }
 h3 {
 	padding-bottom: 1.0em;
 }
+
+p, ul {
+	max-width: 42em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.image-container img {
+	padding: 5px;
+	border: 1px solid $light-gray;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
 // Site header
 .site-header {
-	background-color: $off-white;
+	background-color: $ts_red_dark;
 	box-shadow: 0 0px 12px $light-gray;
 }
 .logo {
 	@include span-columns(4);
-	margin-top: 0.5em;
-	color: $dark-gray;
-	h3 {
-		font-weight: 100;
+	padding-top: 0.4em;
+	padding-bottom: 0.2em;
+	color: $off-white;
+	h4 {
+		font-family: sans-serif;
+		font-weight: 400;
+		font-size: 1.2em;
 	}
 }
 .logo-row {
@@ -72,10 +95,23 @@ section {
 
 // Styles
 
-.light-gray-container {
-	background-color: $light-gray;
+.light-red-container {
+	background-color: $ts_red;	
 }
 
+.concept-text {
+	color: $off-white;
+	font-size: 1.8em;
+	font-family: $serif;
+	padding-bottom: 0.6em;
+}
+
+.header-image-hero {
+	text-align: center;
+	img {
+		max-width: 36em;
+	}
+}
 .half-width {
 	width: 48%;
 }

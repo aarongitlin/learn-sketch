@@ -1,16 +1,18 @@
 ---
-title: Pattern Library Elements
-body_class: elements
+title: Sketch Tutorial
+body_class: index
 ---
 
 =# stylesheet_link_tag "elements"
 
-.light-gray-container.top-section
+.light-red-container.top-section
   .wrapper
     %section.style-overview
       %p.concept-text Learning Sketch... The hard way
 
 .wrapper
+  .header-image-hero
+    = image_tag 'sketch_icon.jpg'
   %section
     %h3 Open Sketch
     .description
@@ -21,7 +23,7 @@ body_class: elements
     %h3 Make a New Page
     .description
       %p We start on a page filled with cool UI stuff, but let's make a new page for our own designs.
-      %p
+      .image-container
         = image_tag 'new_page_1.png', :class => 'half-width'
         = image_tag 'new_page_2.png', :class => 'half-width'
 
@@ -29,14 +31,14 @@ body_class: elements
     %h3 Make some artboards
     .description
       %p This is going to sound really intense... but press 'a'. The right hand menu should reveal some options. Pick the approriate size for your device, mainly <strong>iPhone 6</strong> for iOS or <strong>Mobile Portrait</strong> for Android.
-      %p
+      .image-container
         = image_tag 'artboard_select.png', :class => 'third-width'
 
   %section
     %h3 Make a Splash Page
     .description
       %p Use a solid background color for a punch, plus an icon and/or some textany necessary system stuff (navigation bar) HINTS: insert rectangle shortcut: ‘r’, ‘f’, and ‘b’ to toggle fill and border ‘fn UP’ and ‘fn DOWN’ to toggle between Pages, copy and paste over OR Insert Symbol.
-      %p
+      .image-container
         = image_tag 'splash_example.png', :class => 'third-width'
 
   %section
@@ -55,7 +57,7 @@ body_class: elements
         %li Create rectangle (start from middle, use CMD so you size from center)
         %li Option drag to create a copy
         %li Create styles for both
-      %p
+      .image-container
         = image_tag 'create_symbol.png', :class => 'two-thirds-width'
       %p 
         :markdown
@@ -68,7 +70,7 @@ body_class: elements
       %p
         Copy and Paste the the last art board over.<br />
         <strong>Insert</strong> > <strong>Symbol</strong> and put in a keyboard if you have one. Copy and Paste works too. Size appropriately and move around any elements on screen if necessary
-      %p
+      .image-container
         =image_tag 'insert_symbol_keyboard.png', :class => 'two-thirds-width'
 
   %section
@@ -81,9 +83,9 @@ body_class: elements
         %ul
           %li iOS: 128px (retina) -> 40px status bar, 88px navbar
           %li Android: 80dp retina -> 24dp status bar, 56p app bar (48dp tabs)
-        %p
+        .image-container
           = image_tag 'ios_navbar.png', :class => 'two-thirds-width'
-        %p
+        .image-container
           = image_tag 'android_navbar.png', :class => 'two-thirds-width'
       %p
         <strong>Tab Bar</strong>
@@ -96,7 +98,7 @@ body_class: elements
           %li For the background, let’s stick use an off-white or light gray. Consider a slight tint.
           %li You're not an interface designer if you don't use cards. So let's make some cards! Feel free to go full width, part width, grid, whatever you think best suits your app idea. Don’t worry about Styles or Symbols at this point. We’re still experimenting, so they will just get in our way. 
           %li Put in some filler boxes to spice up your cards. Text if you’re feeling spunky.
-        %p
+        .image-container
           = image_tag 'cards_example.png', :class => 'half-width'
 
   %section
@@ -115,5 +117,9 @@ body_class: elements
   %section
     %h3 Bonus Material
     .description
-      %p For funsies, let's try a plugin! Grab the <a href="http://sketchtoolbox.com/" target="_blank">Sketch Toolbox App</a>, download and install. 
+      %p 
+        For funsies, let's try a plugin! Grab the <a href="http://sketchtoolbox.com/" target="_blank">Sketch Toolbox App</a>, download and install. Download the 'Content Generator Sketch Plugin'. Check to see if it worked by going to <strong>Plugins</strong> and <strong>Content Generator</sketch> should be there.
+      %p
+        Select the gray boxes on your cards, select the plugin, select <strong>Photos</strong> and <strong>Nature and Urban</strong>. There should now be pretty pictures!!
+      
 
