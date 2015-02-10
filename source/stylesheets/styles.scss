@@ -126,7 +126,7 @@ section {
 .header-image-hero {
 	text-align: center;
 	img {
-		max-width: 36em;
+		width: 36em;
 	}
 }
 .half-width {
@@ -147,6 +147,7 @@ section {
 
 .dark-container {
 	background-color: $dark-gray;
+	margin-top: 2em;
 }
 ul.link-collection {
 	padding-top: 1em;
