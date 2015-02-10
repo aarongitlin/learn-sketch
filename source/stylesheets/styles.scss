@@ -67,13 +67,14 @@ li.list-header {
 	float: right;
 	li {
 		float: left;
-		padding: 1em 2em;
+		padding: 0.4em 2em;
 		font-weight: 600;
-		a {
-			color: $dark-gray;
-		}
-		&:hover {
-			background-color: $light-gray;
+		list-style: none;
+		&.activated {
+			background-color: $ts_red;
+			a {
+				color: $ts_red_dark;
+			}
 		}
 	}
 }
