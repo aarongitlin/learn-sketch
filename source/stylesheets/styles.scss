@@ -50,7 +50,7 @@ li.list-header {
 	@include span-columns(4);
 	padding-top: 0.4em;
 	padding-bottom: 0.2em;
-	color: $off-white;
+	color: $ts_orange;
 	h4 {
 		font-family: sans-serif;
 		font-weight: 400;
@@ -126,7 +126,8 @@ section {
 .header-image-hero {
 	text-align: center;
 	img {
-		width: 36em;
+		width: 24em;
+		padding-top: 2em;
 	}
 }
 .half-width {
