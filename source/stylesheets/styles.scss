@@ -18,7 +18,7 @@ h3 {
 	padding-bottom: 1.0em;
 }
 
-p, ul {
+p, ul, ol {
 	max-width: 42em;
 	margin-left: auto;
 	margin-right: auto;
@@ -27,6 +27,12 @@ p, ul {
 ul li {
 	list-style: circle;
 	margin-left: 1.0em;
+}
+ol {
+	list-style: decimal;
+	li {
+		margin-left: 1.0em;
+	}
 }
 li.list-header {
 	margin-left: 0;
@@ -92,6 +98,7 @@ li.list-header {
 }
 section {
 	padding-top: 2.5em;
+	padding-bottom: 1.0em;
 	border-bottom: 1px solid $light-gray;
 }
 .heading-divider {
@@ -118,9 +125,9 @@ section {
 
 .concept-text {
 	color: $off-white;
-	font-size: 1.8em;
+	font-size: 3em;
 	font-family: $serif;
-	padding-bottom: 0.6em;
+	text-align: center;
 }
 
 .header-image-hero {
