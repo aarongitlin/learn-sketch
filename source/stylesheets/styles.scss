@@ -47,6 +47,11 @@ li.list-header {
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 }
+
+.image-container-float img {
+	padding: 5px;
+	border: 1px solid $light-gray;
+}
 // Site header
 .site-header {
 	background-color: $ts_red_dark;
