@@ -142,6 +142,15 @@ section {
 		padding-top: 2em;
 	}
 }
+
+.header-image-ae {
+	text-align: center;
+	img {
+		width: 24em;
+		padding-top: 2em;
+	}
+}
+
 .half-width {
 	@include media($medium-screen-up) {
 		width: 48%;
