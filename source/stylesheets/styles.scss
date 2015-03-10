@@ -47,6 +47,14 @@ li.list-header {
 	margin-top: 0.5em;
 	margin-bottom: 0.5em;
 }
+
+.image-container-ae img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
 // Site header
 .site-header {
 	background-color: $ts_red_dark;
@@ -156,6 +164,13 @@ section {
 		width: 48%;
 	}
 }
+
+.ae-width {
+	@include media($medium-screen-up) {
+		width: 50%;
+	}
+}
+
 .third-width {
 	@include media($medium-screen-up) {
 		width: 32%;

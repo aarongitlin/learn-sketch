@@ -1,5 +1,5 @@
 ---
-title: After Effects Tutorial
+title: after-effects
 body_class: after-effects
 ---
 
@@ -8,158 +8,328 @@ body_class: after-effects
 .light-red-container.top-section
   .wrapper
     .style-overview
-      %p.concept-text Learning After Effects. Making animations!
+      %p.concept-text Learning After Effects. Making Animations!
 
 .wrapper
   .header-image-ae
     = image_tag 'ae.png'
-  
-  %section
-    %h3 Prepare Assets
-    .description
-      %p Import Illustrator file or Photoshop file.
-      %p <strong>OR</strong> 
-      %p Go to <strong>New</strong> > <strong>New From Template</strong> and then choose <strong> iOS UI Design</strong> or <strong>Material Design</strong>, depending on what you want to build.
 
   %section
-    %h3 Make a New Page
+    %h3 Prepare & Import Assets
     .description
-      %p We start on a page filled with cool UI stuff, but let's make a new page for our own designs.
-      .image-container
-        = image_tag 'new_page_1.png', :class => 'half-width'
-        = image_tag 'new_page_2.png', :class => 'half-width'
+      :markdown
+        **There are two ways to prepare assets:**
+
+        1. import PNGs or JPGs;
+        2. import PSD or AI;
+           
+           Be sure to carefully organize all the layers. Any content that needs to animate should be a seperate layer.
+
+
+
+
+        **Let's start with PSD!**
+
+        Launch After Effects > **Right Click** in Project Panel > Import > File...
+        
+        OR **Double click** in Porject Panel.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_import.png" />
+        </div>
+
+        In the Import File window, choose psd file, make sure **Composition - Retain Layer Sizes** is selected, then hit open.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_import_file.png" />
+        </div>
+
+        Check **Editable Layer Styles**, press **OK**.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_import_ok.png" />
+        </div>
+
+        Finally, your layered PSD is correctly imported. All the layers in Photoshop are marked as **Photoshop** assets and the groups are **Composition** assets in Project Panel.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_import_final.png" />
+        </div>
 
   %section
-    %h3 Make some artboards
+    %h3 Composition
     .description
-      %p This is going to sound really intense... but press 'a'. The right hand menu should reveal some options. Pick the approriate size for your device, mainly <strong>iPhone 6</strong> for iOS or <strong>Mobile Portrait</strong> for Android.
-      .image-container
-        = image_tag 'artboard_select.png', :class => 'third-width'
+      :markdown
+        Composition in AE is similar to Group in Photoshop, you can edit each layer in Composition or you can use the composition as a whole to animate it. 
+
+        As we imported photoshop file instead of JPEGs, AE already creates a composition for us. Double click **AE Tutorial Composition** in Project Panel.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_composition.png" />
+        </div>
+
+        You can see **AE Tutorial** composition is opened in timeline, all the layers in Photoshop are listed here.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_timeline.png" />
+        </div>
+
+        Press **Command + k** on your keyboard to open **Composition Settings**. You can change the name and size of this composition, for now, let's just change the **Duration** to be 3s.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_composition_setting.png" />
+        </div>
 
   %section
-    %h3 Make a Splash Page
+    %h3 Set Keyframe
     .description
-      %p Use a solid background color for a punch, plus an icon and/or some textany necessary system stuff (navigation bar) HINTS: insert rectangle shortcut: ‘r’, ‘f’, and ‘b’ to toggle fill and border ‘fn UP’ and ‘fn DOWN’ to toggle between Pages, copy and paste over OR Insert Symbol.
-      .image-container
-        = image_tag 'splash_example.png', :class => 'third-width'
+      :markdown
+        Before jumping into keyframe, let's organize our layers first.
+
+        Select all the text layers, click the **Purple Square**, change the text layer color to **Red**.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_color.png" />
+        </div>
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_color_change.png" />
+        </div>
+
+        Repeat the same step to set layers as below. So **Red** is text layer, **green** is image layer and **purple** is grey overlay layer. This will make the animation process much faster. 
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_color_final.png" />
+        </div>
+
+        Select all green layers, hit **p** on keyboard to open **Position** attribute
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_position.png" />
+        </div>
+
+        Move **Time Indicator** to 01:00f (1s), and then click the **Clock button** before **Position**.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_timeindicator.png" />
+        </div>
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_clock.png" />
+        </div>
+
+        Press **Shift + Command + Right Arrow** to forward indicator 10 frames. Click the **Diamond button** to set a second keyframe.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_secondKey.png" />
+        </div>
+
+        With all **Green layers** selected, press **Shift + Page Down** as mamy times as you want to move all the images down.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_down.png" />
+        </div>
 
   %section
-    %h3 Make a Login Page
+    %h3 Parent Layers
     .description
-      %p 
-        <strong>Backgournd </strong> <br />
-        select the background color from the splash page, and make a new <strong>Style</strong>, ‘primary-color’. For now, let’s just copy and paste it over - copy the background rectangle, select the new artboard, and paste.
-      %p 
-        <strong>Logo</strong><br />
-        Let’s copy and paste over the logo and title as well. Let’s make it smaller, move it up. Make sure it’s in a group so the text reduces correctly.
-      %p
-        <strong>Text boxes</strong><br />
-        Let’s make two text boxes for our username and password. We’ll set these as symbols, so if we change one it will change the other.
-      %ul
-        %li Create rectangle (start from middle, use CMD so you size from center)
-        %li Option drag to create a copy
-        %li Create styles for both
-      .image-container
-        = image_tag 'create_symbol.png', :class => 'two-thirds-width'
-      %p 
-        :markdown
-          **Login Button**  
-          You can use CTRL-C to copy a style, and give it a baller shadow.
+      :markdown
+        Now we need to let all Texts and overlay layers move along with images, there is a very easy way to do that. 
+
+        Firstly, press **j** on the keyboard to go back to **previous frame** where all texts and overlay layers are at the right position.
+
+        Choose **ICEAGE layer**, drag the **Spiral button** under **Parent** and link it to **Green 1 layer**.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_parent.png" />
+        </div>
+
+        Repeat the same step for all **Red text layers**: link **SEA to 2, MOON to 3, AURORA to 4, LAVA to 5 and LIGHT to 6**. So all the text layers become **children** of image layers, will copy image layers' position attribute and move with them.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_parentT.png" />
+        </div>
+
+        Then **Parent** all the **Purple grey overlay layers** to image layers.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_overlay.png" />
+        </div>
 
   %section
-    %h3 Login Page with Keyboard
+    %h3 Preview
     .description
-      %p
-        Copy and Paste the the last art board over.<br />
-        <strong>Insert</strong> > <strong>Symbol</strong> and put in a keyboard if you have one. Copy and Paste works too. Size appropriately and move around any elements on screen if necessary
-      .image-container
-        =image_tag 'insert_symbol_keyboard.png', :class => 'two-thirds-width'
+      :markdown
+        **It's better to preview the animation before moving forward.**
+
+        Click the **Ram Preview button** or press **Control + 0** to render and play the result in real time.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_preview.png" />
+        </div>
+
+
 
   %section
-    %h3 Dashboard
+    %h3 Adjust Position
     .description
-      %p
-        Make this page a little longer.
-      %p
-        <strong>Navbar</strong>
-        %ul
-          %li iOS: 128px (retina) -> 40px status bar, 88px navbar
-          %li Android: 80dp retina -> 24dp status bar, 56p app bar (48dp tabs)
-        .image-container
-          = image_tag 'ios_navbar.png', :class => 'two-thirds-width'
-        .image-container
-          = image_tag 'android_navbar.png', :class => 'two-thirds-width'
-      %p
-        <strong>Tab Bar</strong>
-        %ul
-          %li iOS -> usually light color. consider tinting to match highlight color
-          %li Android -> same color as app bar.
-      %p
-        <strong>Content Area</strong>
-        %ul
-          %li For the background, let’s stick use an off-white or light gray. Consider a slight tint.
-          %li You're not an interface designer if you don't use cards. So let's make some cards! Feel free to go full width, part width, grid, whatever you think best suits your app idea. Don’t worry about Styles or Symbols at this point. We’re still experimenting, so they will just get in our way. 
-          %li Put in some filler boxes to spice up your cards. Text if you’re feeling spunky.
-        .image-container
-          = image_tag 'cards_example.png', :class => 'half-width'
+      :markdown
+        **Let's make this animation looks more natural.**
+
+        Firstly, create some delay time for all layers except the first one. So the next card will move after the previous one moves.
+
+        Drag and move keyframes to look like this. The next layer's keyframes are **2 frames** behind the previous layers'.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_delay.png" />
+        </div>
+
+        Then let's adjust each layers' final positions. We'll make the first card move off the screen, and next cards become bigger.
+
+        Select **Green 1** layer, move the indicator to the second keyframe, press **Shift + Page Down** to move the first card off the screen.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_select.png" />
+        </div>
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_firstOff.png" />
+        </div>
+
+        Similarly, we can adujst other **Green image layers** using the same way, to make their final position natural and consistent.
+
+        In order to make the transition more fluent, we need to edit **Speed Curve**. 
+
+        Select all the keyframes, click the **Graph Editor**.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_graph1.png" />
+        </div>
+
+        You can see the **Graph Editor** pen like this, **right click** to make sure **Edit Speed Graph** is checked.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_rightClick.png" />
+        </div>
+
+        Select all the points, click **Easy Ease button**
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_easyEase.png" />
+        </div>
+
+        To make it more dynamic, we can edit the curve by dragging its **yellow handle** to make it look like bellow. So layers will hold on a little bit, then drop quickly and finally stop slowly.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_handle.png" />
+        </div>
+
+        If the movement is too fast, we can forward all second keyframes 10 frames.
+
 
   %section
-    %h3 Invision Integration
+    %h3 Adjust Size & Opacity
     .description
-      %p
-        Before we drop our Sketch file into Invision, let's make sure are artboards are properly named. I like numbering, but do what you think fits best! 1. 0 Splash, 2.0 Login 2.1 Login Keyboard etc etc. To change the artboards name, you can double tap on the name in the Layers Menu on the left, or press CMD-R when selecting the artboard.
-      %p
-        %ul
-          %li Go to Invision Sync folder and create a new project. Wait for the assets folder to appear, and add your sketch file to the Source File folder.
+      :markdown
+        Then, we can also add some size changes to each card, so when each card moving forward, it's getting bigger.
 
-          %li Go to projects.invisionapp.com and log in as xd.admin and find your project. Pick the correct device and hopefully your screens are loaded in. Create some hotspots, link em up, and share to your phone.
+        Go back to **Green 1 layer**, move indicator to the first keyframe, press **Shift + s** to open **Scale attribute**. Click the **Clock button** to set the first keyframe. Then set the second keyframe and change its value to be 108% as below.
 
-          %li If there’s time, update a screen or two. Add some more content, change your text boxes. save the sketch file and watch invision pick up the changes magically (if not instantly; give it a minute).
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_size.png" />
+        </div>
+
+        Repeat the same steps for left **Green layers**. Then select all **Scale Attributes**, click **Graph Editor** and adjust the curves to be **Easy Ease** for now. 
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_sizeSelect.png" />
+        </div>
+
+        Another adjustment is to make the second card brighter (decrease the opacity of its overlay layer) when it scrolls to the front. 
+
+        Find the first **Purple grey layer**, press **t** to open **Opacity** attribute, set two keyframes and change the second value to be 0%. At last, make two keyframes **Easy Ease** like we did for sizes.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_t.png" />
+        </div>
 
   %section
-    %h3 Bonus Material
+    %h3 Bonus - 3D Effect!
     .description
-      %p 
-        For funsies, let's try a plugin! Grab the <a href="http://sketchtoolbox.com/" target="_blank">Sketch Toolbox App</a>, download and install. Download the 'Content Generator Sketch Plugin'. Check to see if it worked by going to <strong>Plugins</strong> and <strong>Content Generator</strong> should be there.
-      %p
-        Select the gray boxes on your cards, select the plugin, select <strong>Photos</strong> and <strong>Nature and Urban</strong>. There should now be pretty pictures!!
-      
-.dark-container
-  .wrapper
-    .third-column
-      %ul.link-collection 
-        %li.list-header General
-        %li 
-          %a{:href => "http://bohemiancoding.com/sketch/"} Official Website
-        %li 
-          %a{:href => "https://designcode.io/sketch"} Meng To's Design+Code Sketch Page
-        %li
-          %a{:href => "https://medium.com/@KounterB/a-month-with-sketch-3-68c443fe5041"} A Month with Sketch
-        %li
-          %a{:href => "http://www.invisionapp.com/new-features/28/invision-now-supports-sketch-files-high-fives"} Invision integration with Sketch
-    .third-column
-      %ul.link-collection
-        %li.list-header Resource Collections
-        %li 
-          %a{:href => "http://www.sketchappsources.com/"} Sketch App Sources
-        %li 
-          %a{:href => "https://ustwolearn.squarespace.com/sketch-resources/"} Great Collection from ustwo
-        %li 
-          %a{:href => "http://sketchresources.com/"} Sketchresources.com
-    .third-column
-      %ul.link-collection 
-        %li.list-header Tutorials & Tips
-        %li 
-          %a{:href => "http://fourword.fourkitchens.com/article/designing-android-app-using-sketch-3?rel=sar"} Building an Android App
-        %li 
-          %a{:href => "http://www.smashingmagazine.com/2015/01/30/prototyping-ios-android-apps-sketch-freebie/"} Smashing Magazine Walkthrough
-        %li 
-          %a{:href => "https://medium.com/@bazdeas/supercharge-your-workflow-in-sketch-ebc9e5274845"} Supercharge your workflow
-        %li 
-          %a{:href => "http://sketchshortcuts.com/"} Amazing Collection of Shortcuts
-        %li
-          %a{:href => "https://medium.com/sketch-app/organizing-sketch-3-for-ios-ebb97cae58b7"} iOS design workflow 
+      :markdown
+        Now we have a pretty decent look for a scrolling animation, let's also add some cool 3D effect to it.
+
+        Choose all the layers except background layer, click **the black square** under **3D Layer** column. 
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_3d.png" />
+        </div>
+
+        Only select the first **Green layer**, set two **X Rotation** keyframes as below.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_3d_2key.png" />
+        </div>
+
+        Move to the 1/3 place between two keyframes, create the third one and change its value to be **0x+10.0**. And then make all three keyframes **Easy Ease**. Repeat the same step for other green layers.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_3d_3.png" />
+        </div>
+
+        When you preview it by hitting **Control + 0**, you may notice some back layers will come across front layers. That's because all layers are on the same Z axis. We need to move layers on the back a little bit further into the screen.
+
+        Let's go to **Green 5 layer**, move the indicator to the first Position keyframe, change it's third value to be -2, then move the indicator to the second Position keyframe, also change the third value to be -2.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_3d_value.png" />
+        </div>
+
+        Repeat the same step for other green layers, but the value for each layer should be **-4, -6, -8, -10**.
+
+  %section
+    %h3 Export
+    .description
+      :markdown
+        It's time to export our scrolling animation!
+
+        Select all layers, go to **Composition - Add to Render Quenen** or press **Control + Command + m** to open Render Queue window.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_export.png" />
+        </div>
+
+        In Render Queue window, click **Output Module: Lossless**.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_lossless.png" />
+        </div>
+
+        In **Output Module Settings**, click **Format Options**, change **Vedeo Codec** to be **H.264**.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_format.png" />
+        </div>
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_codec.png" />
+        </div>
+
+        Then back to Render Queue window, click **Output To: AE Tutorial.mov** to change the name of video and the place where you wanna save it.
+
+        Finally, let's click **Render** button to get your video rendered and saved!
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_render.png" />
+        </div>
 
 
 
 
+
+
+
+
+
+ 
+        
