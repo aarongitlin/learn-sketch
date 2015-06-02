@@ -1,0 +1,372 @@
+---
+title: after-effects
+body_class: after-effects
+---
+
+=# stylesheet_link_tag "elements"
+
+.light-red-container.top-section
+  .wrapper
+    .style-overview
+      %p.concept-text Learning After Effects. Making Animations!
+
+.wrapper
+  .header-image-ae
+    = image_tag 'ae.png'
+
+  %section
+    %h3 Prepare & Import Assets
+    .description
+      :markdown
+        **There are two ways to prepare assets:**
+
+        1. import PNGs or JPGs;
+        2. import PSD or AI;
+           
+           Be sure to carefully organize all the layers. Any content that needs to animate should be a separate layer.
+
+
+
+
+        **Let's start with PSD!**
+
+        Launch After Effects > **Right Click** in Project Panel > Import > File...
+        
+        OR **Double click** in Project Panel.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_import.png" />
+        </div>
+
+        In the Import File window, choose psd file, make sure **Composition - Retain Layer Sizes** is selected, then hit open.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_import_file.png" />
+        </div>
+
+        Check **Editable Layer Styles**, press **OK**.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_import_ok.png" />
+        </div>
+
+        Finally, your layered PSD is correctly imported. All the layers in Photoshop are marked as **Photoshop** assets and the groups are **Composition** assets in Project Panel.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_import_final.png" />
+        </div>
+
+  %section
+    %h3 Composition
+    .description
+      :markdown
+        Composition in AE is similar to Group in Photoshop, you can edit each layer in Composition or you can use the composition as a whole to animate it. 
+
+        As we imported photoshop file instead of JPEGs, AE already creates a composition for us. Double click **AE Tutorial Composition** in Project Panel.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_composition.png" />
+        </div>
+
+        You can see **AE Tutorial** composition is opened in timeline, all the layers in Photoshop are listed here.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_timeline.png" />
+        </div>
+
+        Press **Command + k** on your keyboard to open **Composition Settings**. You can change the name and size of this composition, for now, let's just change the **Duration** to be 3s.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_composition_setting.png" />
+        </div>
+
+  %section
+    %h3 Set Keyframe
+    .description
+      :markdown
+        Before jumping into keyframe, let's organize our layers first.
+
+        Select all the text layers, click the **Purple Square**, change the text layer color to **Red**.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_color.png" />
+        </div>
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_color_change.png" />
+        </div>
+
+        Repeat the same step to set layers as below. So **Red** is text layer, **green** is image layer and **purple** is grey overlay layer. This will make the animation process much faster. 
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_color_final.png" />
+        </div>
+
+        Select all green layers, hit **p** on keyboard to open **Position** attribute
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_position.png" />
+        </div>
+
+        Move **Time Indicator** to 01:00f (1s), and then click the **Clock button** before **Position**.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_timeindicator.png" />
+        </div>
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_clock.png" />
+        </div>
+
+        Press **Shift + Command + Right Arrow** to forward indicator 10 frames. Click the **Diamond button** to set a second keyframe.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_secondKey.png" />
+        </div>
+
+        With all **Green layers** selected, press **Shift + Page Down** as many times as you want to move all the images down.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_down.png" />
+        </div>
+
+  %section
+    %h3 Parent Layers
+    .description
+      :markdown
+        Now we need to let all Texts and overlay layers move along with images, there is a very easy way to do that. 
+
+        Firstly, press **j** on the keyboard to go back to **previous frame** where all texts and overlay layers are at the right position.
+
+        Choose **ICEAGE layer**, drag the **Spiral button** under **Parent** and link it to **Green 1 layer**.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_parent.png" />
+        </div>
+
+        Repeat the same step for all **Red text layers**: link **SEA to 2, MOON to 3, AURORA to 4, LAVA to 5 and LIGHT to 6**. So all the text layers become **children** of image layers, will copy image layers' position attribute and move with them.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_parentT.png" />
+        </div>
+
+        Then **Parent** all the **Purple grey overlay layers** to image layers.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_overlay.png" />
+        </div>
+
+  %section
+    %h3 Preview
+    .description
+      :markdown
+        **It's better to preview the animation before moving forward.**
+
+        Click the **Ram Preview button** or press **Control + 0** to render and play the result in real time.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_preview.png" />
+        </div>
+
+
+
+  %section
+    %h3 Adjust Position
+    .description
+      :markdown
+        **Let's make this animation looks more natural.**
+
+        Firstly, create some delay time for all layers except the first one. So the next card will move after the previous one moves.
+
+        Drag and move keyframes to look like this. The next layer's keyframes are **2 frames** behind the previous layers'.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_delay.png" />
+        </div>
+
+        Then let's adjust each layers' final positions. We'll make the first card move off the screen, and next cards become bigger.
+
+        Select **Green 1** layer, move the indicator to the second keyframe, press **Shift + Page Down** to move the first card off the screen.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_select.png" />
+        </div>
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_firstOff.png" />
+        </div>
+
+        Similarly, we can adjust other **Green image layers** using the same way, to make their final position natural and consistent.
+
+        In order to make the transition more fluent, we need to edit **Speed Curve**. 
+
+        Select all the keyframes, click the **Graph Editor**.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_graph1.png" />
+        </div>
+
+        You can see the **Graph Editor** pen like this, **right click** to make sure **Edit Speed Graph** is checked.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_rightClick.png" />
+        </div>
+
+        Select all the points, click **Easy Ease button**
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_easyEase.png" />
+        </div>
+
+        To make it more dynamic, we can edit the curve by dragging its **yellow handle** to make it look like below. So layers will hold on a little bit, then drop quickly and finally stop slowly.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_handle.png" />
+        </div>
+
+        If the movement is too fast, we can forward all second keyframes 10 frames.
+
+
+  %section
+    %h3 Adjust Size & Opacity
+    .description
+      :markdown
+        Then, we can also add some size changes to each card, so when each card moving forward, it's getting bigger.
+
+        Go back to **Green 1 layer**, move indicator to the first keyframe, press **Shift + s** to open **Scale attribute**. Click the **Clock button** to set the first keyframe. Then set the second keyframe and change its value to be 108% as below.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_size.png" />
+        </div>
+
+        Repeat the same steps for left **Green layers**. Then select all **Scale Attributes**, click **Graph Editor** and adjust the curves to be **Easy Ease** for now. 
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_sizeSelect.png" />
+        </div>
+
+        Another adjustment is to make the second card brighter (decrease the opacity of its overlay layer) when it scrolls to the front. 
+
+        Find the first **Purple grey layer**, press **t** to open **Opacity** attribute, set two keyframes and change the second value to be 0%. At last, make two keyframes **Easy Ease** like we did for sizes.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_t.png" />
+        </div>
+
+  %section
+    %h3 Bonus - 3D Effect!
+    .description
+      :markdown
+        Now we have a pretty decent look for a scrolling animation, let's also add some cool 3D effect to it.
+
+        Choose all the layers except background layer, click **the black square** under **3D Layer** column. 
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_3d.png" />
+        </div>
+
+        Only select the first **Green layer**, set two **X Rotation** keyframes as below.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_3d_2key.png" />
+        </div>
+
+        Move to the 1/3 place between two keyframes, create the third one and change its value to be **0x+10.0**. And then make all three keyframes **Easy Ease**. Repeat the same step for other green layers.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_3d_3.png" />
+        </div>
+
+        When you preview it by hitting **Control + 0**, you may notice some back layers will come across front layers. That's because all layers are on the same Z axis. We need to move layers on the back a little bit further into the screen.
+
+        Let's go to **Green 5 layer**, move the indicator to the first Position keyframe, change it's third value to be -2, then move the indicator to the second Position keyframe, also change the third value to be -2.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_3d_value.png" />
+        </div>
+
+        Repeat the same step for other green layers, but the value for each layer should be **-4, -6, -8, -10**.
+
+  %section
+    %h3 Export
+    .description
+      :markdown
+        It's time to export our scrolling animation!
+
+        Select all layers, go to **Composition - Add to Render Queen** or press **Control + Command + m** to open Render Queue window.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_export.png" />
+        </div>
+
+        In Render Queue window, click **Output Module: Lossless**.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_lossless.png" />
+        </div>
+
+        In **Output Module Settings**, click **Format Options**, change **Video Codec** to be **H.264**.
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_format.png" />
+        </div>
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_codec.png" />
+        </div>
+
+        Then back to Render Queue window, click **Output To: AE Tutorial.mov** to change the name of video and the place where you wanna save it.
+
+        Finally, let's click **Render** button to get your video rendered and saved!
+
+        <div class='image-container-ae'>
+          <img class="ae-width" src="images/ae_render.png" />
+        </div>
+
+  %section
+    %h3 Sample Video
+    .description
+      :markdown
+        [Final Animation Is Here](https://vimeo.com/128888590)
+
+.dark-container
+  .wrapper
+    .third-column
+      %ul.link-collection 
+        %li.list-header General Tips
+        %li 
+          %a{:href => "https://helpx.adobe.com/after-effects/using/keyboard-shortcuts-reference.html"} After Effects Shortcuts
+        %li
+          %a{:href => "https://helpx.adobe.com/after-effects/tutorials.html"} Essentials for Beginners 
+        %li 
+          %a{:href => "https://helpx.adobe.com/after-effects/using/workflows.html"} General Workflow
+    .third-column
+      %ul.link-collection
+        %li.list-header Use After Effect for UI Deisgn
+        %li 
+          %a{:href => "http://webdesign.tutsplus.com/articles/quick-tip-creating-an-app-walkthrough-in-after-effects--webdesign-10088"} Creating an App Walkthrough
+        %li 
+          %a{:href => "http://www.digitaltutors.com/lesson/44183-Setting-up-sliders-and-expressions"} UI/UX Motion Study
+        %li 
+          %a{:href => "https://developertodesigner.wordpress.com/2014/05/09/how-to-create-animated-gifs-for-ui-design-presentations/"} UI Design Presentation
+        %li 
+          %a{:href => "http://abduzeedo.com/ios7-ui-effects-photoshop-and-after-effects"} iOS7 UI Effects
+    .third-column
+      %ul.link-collection 
+        %li.list-header Special Effects
+        %li 
+          %a{:href => "hhttp://www.videocopilot.net/tutorials/"} Video Copilot
+        %li 
+          %a{:href => "http://www.digitaltutors.com/software/After-Effects-tutorials"} Digital Tutors
+        %li 
+          %a{:href => "http://cgi.tutsplus.com/categories/adobe-after-effects"} Tutsplus - After Effects
+
+
+
+
+
+
+
+
+ 
+        

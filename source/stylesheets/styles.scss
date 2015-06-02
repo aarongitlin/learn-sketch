@@ -48,9 +48,18 @@ li.list-header {
 	margin-bottom: 0.5em;
 }
 
+
 .image-container-float img {
 	padding: 5px;
 	border: 1px solid $light-gray;
+
+.image-container-ae img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+
 }
 // Site header
 .site-header {
@@ -147,11 +156,27 @@ section {
 		padding-top: 2em;
 	}
 }
+
+.header-image-ae {
+	text-align: center;
+	img {
+		width: 24em;
+		padding-top: 2em;
+	}
+}
+
 .half-width {
 	@include media($medium-screen-up) {
 		width: 48%;
 	}
 }
+
+.ae-width {
+	@include media($medium-screen-up) {
+		width: 50%;
+	}
+}
+
 .third-width {
 	@include media($medium-screen-up) {
 		width: 32%;

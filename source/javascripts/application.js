@@ -14,4 +14,8 @@ if ( $("body").hasClass('writing-briefs') ) {
   $(".header-nav .writing-briefs-link").addClass('activated');
 }
 
+if ( $("body").hasClass('after-effects') ) {
+  $(".header-nav .after-effects-link").addClass('activated');
+}
+
 });
